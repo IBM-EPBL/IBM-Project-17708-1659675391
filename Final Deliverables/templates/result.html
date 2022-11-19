@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Classification of Arrhythmia</title>
+    <link rel="stylesheet" href="/static/csss/style.css">
+</head>
+<body>
+
+<div class="BG">
+         <nav>
+           <input type="checkbox" id="check">
+           <label for="check" class="checkbtn">
+             <i class="fas fa-bars"></i>
+           </label>
+           <label class="logo">ECG </label>
+
+           <ul>
+             <li><a  href="home.html">Home</a></li>
+			  <li><a  href="about-us.html">Info</a></li>
+             <li><a  href="classify.html">Predict</a></li>
+
+           </ul>
+         </nav>
+
+      </div>
+
+
+
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="/static/video/ecg.mp4" type="video/mp4">
+
+</video>
+
+<div class="content1">
+  <h11><u>Result</u></h11>
+  <h2>The classified Arrhythmiya type is : <br>{{result}}</h2>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+

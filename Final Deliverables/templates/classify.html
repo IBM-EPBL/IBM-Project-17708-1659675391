@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Classification of Arrhythmia</title>
+<link rel="stylesheet" href="/static/csss/style.css">
+</head>
+<body>
+
+
+<div class="BG">
+         <nav>
+           <input type="checkbox" id="check">
+           <label for="check" class="checkbtn">
+             <i class="fas fa-bars"></i>
+           </label>
+           <label class="logo">ECG </label>
+
+           <ul>
+             <li><a  href="home.html">Home</a></li>
+			  <li><a  href="about-us.html">Info</a></li>
+             <li><a class="active" href="#">Predict</a></li>
+
+           </ul>
+         </nav>
+
+      </div>
+
+
+<h1>Classification of Arrhythmia</h1>
+<div id="predict" >
+	<form action="/classify.html" id="upload-file" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" id="file" class="btn1" value="Choose File" accept="image/png, image/jpeg ,image/jpg">
+	<input type="image" id="img" class="img" src="/static/images/logo.png" >
+	<input type="submit" id="btn2" class="btn2" value="Predict">
+	</form>
+</div>
+
+
+<footer>
+
+  <div class="bottom">
+    <center>
+      <span class="credit">Created By <a href="">AK</a> | </span>
+      <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+    </center>
+  </div>
+</footer>
+<script>
+const chooseFile = document.getElementById("file");
+const imgPreview = document.getElementById("img");
+file.addEventListener("change", function () {
+  getImgData();
+});
+function getImgData() {
+  const files = chooseFile.files[0];
+  if (files) {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(files);
+    fileReader.addEventListener("load", function () {
+      console.log(imgPreview.src);
+      imgPreview.src =this.result;
+    });
+  }
+}
+</script>
+
+</body>
+</html>
